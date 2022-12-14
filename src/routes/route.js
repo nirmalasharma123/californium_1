@@ -70,4 +70,64 @@ router.post("/test-post-4", function(req, res) {
     res.send(  { msg: arr , status: true }  )
 })
 
-module.exports = router;
+
+let playersInfo = [
+            {
+                'name': 'Virat',
+                'DOB':  "12/2/1997",
+                'gender': 'male',
+                'city': 'delhi',
+                'sport': [
+                    'cricket'
+                ]
+            },
+            {
+                'name': 'Rahul',
+                'DOB':   "16/12/1997"  ,
+                'gender': 'male',
+                'city': 'U.P',
+                'sport': [
+                    'kabaddi'
+                ]
+            },
+            {
+                'name': 'Mary kom',
+                'DOB':  "23/5/1994",
+                'gender': 'female',
+                'city': 'sikkim',
+                'sport': [
+                    'boxing'
+                ]
+            },
+            {
+                'name': 'P.V Sindhu',
+                'DOB':   "12/3/1996"  ,
+                'gender': 'female',
+                'city': 'karnataka',
+                'sport': [
+                    'badminton'
+                ]
+            }
+        ]
+        
+router.post("/player",function (req,res){
+    let newPlayer = req.body.player;
+    for(let i=0;i<playersInfo.length;i++){
+      
+      if(playersInfo[i].name==newPlayer.name){
+         return res.send(playersInfo);;
+      }else if(playersInfo[i].name!=newPlayer.name){
+          playersInfo.push(newPlayer);
+         return res.send(playersInfo)
+          
+  
+            }
+        }
+    })
+
+    module.exports = router;
+
+
+
+
+
