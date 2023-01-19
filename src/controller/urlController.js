@@ -37,7 +37,6 @@ const makeShortUrl = async function (req, res) {
       return res.status(400).send({ status: false, message: "please put a  valid url" });
 
 
-
     let findDataInCache= await GET_ASYNC(data.longUrl);
     if(findDataInCache) return res.status(200).send({status:true,data:JSON.parse(findDataInCache)})
 
@@ -70,7 +69,6 @@ const makeShortUrl = async function (req, res) {
 const reDirect = async function (req, res) {
   try {
     let data = req.params.urlCode;
-    if (!data) return res.status(400).send({ status: false, message: "Invalid request" })
     let validShortId = shortId.isValid(data);
     if (!validShortId) return res.status(400).send({ status: false, message: "invalid url code" });
 

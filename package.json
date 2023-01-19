@@ -1,23 +1,13 @@
 {
-  "name": "project3_group9_shorturl",
-  "version": "1.0.0",
-  "description": "Shorting the url",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Chetan-Singh-Chouhan/project3_Group9_shortUrl.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Chetan-Singh-Chouhan/project3_Group9_shortUrl/issues"
-  },
-  "homepage": "https://github.com/Chetan-Singh-Chouhan/project3_Group9_shortUrl#readme",
   "dependencies": {
-    "express": "^4.18.2"
+    "express": "^4.18.2",
+    "mongoose": "^6.8.4",
+    "nodemon": "^2.0.20",
+    "redis": "^3.1.2",
+    "shortid": "^2.2.16",
+    "url": "^0.11.0",
+    "util": "^0.12.5",
+    "valid": "^0.1.1",
+    "valid-url": "^1.0.9"
   }
 }
